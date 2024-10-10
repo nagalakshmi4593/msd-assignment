@@ -1,0 +1,49 @@
+<!-- views/dashboard.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, <%= user.username %>!</h1>
+        <form action="/update" method="POST">
+            <input type="text" name="username" placeholder="Update Username" required>
+            <button type="submit">Update</button>
+        </form>
+
+        <!-- Image upload form -->
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" required>
+            <button type="submit">Upload Image</button>
+        </form>
+
+        <!-- Display uploaded images -->
+        <h2>Your Images</h2>
+        <div>
+            <% user.images.forEach(image => { %>
+                <div>
+                    <img src="/uploads/<%= image %>" alt="<%= image %>" style="width: 100px; height: auto;">
+                    <form action="/delete-image" method="POST" style="display:inline;">
+                        <input type="hidden" name="image" value="<%= image %>">
+                        <button type="submit">Delete</button>
+                    </form>
+                </div>
+            <% }) %>
+        </div>
+
+        <!-- Logout button -->
+        <form action="/logout" method="POST">
+            <button type="submit">Logout</button>
+        </form>
+
+        <!-- Delete account button -->
+        <form action="/delete" method="POST">
+            <button type="submit" style="background-color: red;">Delete Account</button>
+        </form>
+    </div>
+</body>
+</html>

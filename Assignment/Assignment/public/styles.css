@@ -1,0 +1,111 @@
+/* public/styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('https://wallpaperboat.com/wp-content/uploads/2019/10/cool-website-background-01.jpg'); /* Updated stylish background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #f1f1f1;
+}
+
+/* Container with glassmorphism effect */
+.container {
+    width: 400px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for glass effect */
+    border-radius: 15px; /* More pronounced rounded corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Softer, larger shadow */
+    backdrop-filter: blur(10px); /* Blur effect to enhance glass look */
+    -webkit-backdrop-filter: blur(10px); /* Support for Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for glass effect */
+    text-align: center;
+    color: #ffffff;
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-size: 26px; /* Slightly larger and bold */
+    color: #ffffff;
+    letter-spacing: 1px; /* Add spacing for modern look */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input {
+    margin: 12px 0;
+    padding: 14px;
+    border: none;
+    border-radius: 8px; /* Larger rounding */
+    background: rgba(255, 255, 255, 0.15); /* Transparent white background */
+    color: #ffffff;
+    font-size: 16px;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px); /* Slight blur inside inputs */
+}
+
+input::placeholder {
+    color: #ddd;
+}
+
+button {
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s; /* Added transform effect */
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.05); /* Slight scale-up effect on hover */
+}
+
+.btn {
+    display: inline-block; /* Allows setting width and height */
+    margin-top: 10px; /* Space above the button */
+    padding: 12px 18px; /* Slightly larger padding */
+    background-color: #007bff; /* Base background color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 6px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.2s; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Add shadow for depth */
+    font-weight: bold; /* Make the text bold */
+    font-size: 16px; /* Slightly larger font size */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3); /* Increased shadow on hover */
+}
+
+.btn:active {
+    background-color: #004085; /* Even darker shade when clicked */
+    transform: scale(1); /* Reset scale */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Reset shadow */
+}
+
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    color: #ccc;
+    font-size: 14px;
+}
